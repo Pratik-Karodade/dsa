@@ -1,5 +1,5 @@
 package com.company;
-
+// we can interact with linkedList only with the help of head and tail.
 public class LinkedList {
     private Node head;
     private Node tail;
