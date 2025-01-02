@@ -32,6 +32,38 @@ public class LinkedList {
         length++;
     }
 
+    public Node removeLast(){
+        if(length==0){
+            return null;
+        }
+        Node temp=head;
+        Node pre = head;
+        while(temp.next!=null){
+            pre=temp;
+            temp = temp.next;
+        }
+        tail=pre;
+        tail.next=null;
+        length--;
+        if(length==0){
+            head=null;
+            tail=null;
+        }
+        return temp;
+    }
+
+    public void prepend(int value){
+        Node newNode = new Node(value);
+        if(length==0){
+            head=newNode;
+            tail=newNode;
+        }else {
+            newNode.next=head;
+            head=newNode;
+        }
+        length++;
+    }
+
     public void getHead() {
         System.out.println("Head is : " + head.value);
     }
