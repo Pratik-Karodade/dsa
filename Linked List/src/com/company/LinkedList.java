@@ -45,6 +45,9 @@ public class LinkedList {
         tail=pre;
         tail.next=null;
         length--;
+        /* we are checking this again bcoz in case of LL length =1 tail initially points to null.
+            it will just reduce the length but not the node and Node will be as it is.
+         */
         if(length==0){
             head=null;
             tail=null;
